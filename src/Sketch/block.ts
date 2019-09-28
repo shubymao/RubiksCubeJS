@@ -5,7 +5,7 @@ export default class Block {
   //primary object to pass down
   public object = new Object3D();
   public stickers: Sticker[] = new Array(6);
-  public core: RoundedBoxGeometry;
+  public core: any;
   public mat: MeshLambertMaterial;
   public block: Mesh;
   //parameters

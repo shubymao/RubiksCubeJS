@@ -1,5 +1,4 @@
 import Cube from './cube';
-import Stats from 'stats.js';
 import Control from './control';
 import {
   Vector3,
@@ -30,8 +29,6 @@ export default class Game {
   //State for checking if move is ongoing
   public state: number = still;
   //stat.js componenet
-  public fpsMonitor = new Stats();
-  public fpsdom: HTMLElement = this.fpsMonitor.dom;
   //constructor to initalize component
   public constructor(n: number, width: number) {
     this.n = n;
@@ -44,7 +41,6 @@ export default class Game {
     this.createLight();
     this.initkeys();
     this.initcontrol();
-    this.initstat();
     this.start();
   }
   private start() {
@@ -54,10 +50,8 @@ export default class Game {
     cancelAnimationFrame(this.frameId);
   }
   private animate() {
-    this.fpsMonitor.begin();
     for (let animation of this.animations) animation.update();
     this.renderScene();
-    this.fpsMonitor.end();
     this.frameId = window.requestAnimationFrame(this.animate);
   }
   private keypress = (ev: KeyboardEvent) => {
@@ -121,10 +115,6 @@ export default class Game {
     for (let i = 0; i < 6; i++) this.key.set(`Key${frow.charAt(i)}`, i);
     for (let i = 0; i < 6; i++) this.key.set(`Key${srow.charAt(i)}`, 6 + i);
     for (let i = 0; i < 6; i++) this.key.set(`Key${trow.charAt(i)}`, 12 + i);
-  }
-  private initstat() {
-    this.fpsMonitor.showPanel(0);
-    this.fpsdom.style.position = 'absolute';
   }
   private initcube() {
     this.scene.add(this.cube.getcube());
