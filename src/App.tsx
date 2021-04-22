@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css';
 import Game from './lib/game'
 import ThreeWrapper from './components/ThreeWrapper';
