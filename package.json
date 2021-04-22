@@ -1,5 +1,6 @@
 {
-  "name": "rubikscubejs",
+  "name": "rubiks-cube-web",
+  "homepage": "https://shubymao.github.io/rubiks-cube-web/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

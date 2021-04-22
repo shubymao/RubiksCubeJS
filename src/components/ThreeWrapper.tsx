@@ -1,5 +1,6 @@
 import React, { Component, createRef } from 'react';
-export class ThreeWrapper extends Component<{ game: any }, {}> {
+import Game from '../lib/game';
+export class ThreeWrapper extends Component<{ game: Game }, {}> {
   private mount: React.RefObject<HTMLDivElement>;
   public constructor(props: any) {
     super(props);
@@ -13,7 +14,6 @@ export class ThreeWrapper extends Component<{ game: any }, {}> {
     if (this.mount.current !== null) {
       this.mount.current.appendChild(this.props.game.renderer.domElement);
       this.props.game.updateoffset(this.mount.current.offsetLeft, this.mount.current.offsetTop);
-      if (this.props.game.fpsdom != null) this.mount.current.appendChild(this.props.game.fpsdom);
     }
   }
   private updateoffset() {
@@ -23,7 +23,6 @@ export class ThreeWrapper extends Component<{ game: any }, {}> {
   }
   public componentWillUnmount() {
     this.props.game.stop();
-    if (this.mount.current !== null) this.mount.current.removeChild(this.props.game.renderer.domElement);
   }
   public render() {
     return (

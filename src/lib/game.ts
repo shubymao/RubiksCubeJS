@@ -15,7 +15,7 @@ export default class Game {
   public control: Control;
   public n: number;
   private frameId = -1;
-  private renderer: WebGLRenderer;
+  public renderer: WebGLRenderer;
   public camera: PerspectiveCamera = new PerspectiveCamera(10, 1, 0.1, 10000);
   public width: number = 500;
   public height: number = 500;
@@ -43,17 +43,24 @@ export default class Game {
     this.initcontrol();
     this.start();
   }
-  private start() {
+  public start() {
     requestAnimationFrame(this.animate);
   }
+  
   public stop() {
     cancelAnimationFrame(this.frameId);
   }
+  
+  public shuffle(){
+    this.cube.scramble_cube(this.n * this.n + 20);
+  }
+  
   private animate() {
     for (let animation of this.animations) animation.update();
     this.renderScene();
     this.frameId = window.requestAnimationFrame(this.animate);
   }
+
   private keypress = (ev: KeyboardEvent) => {
     ev.preventDefault();
     if (this.arrowkey.has(ev.code)) {
@@ -63,13 +70,13 @@ export default class Game {
       let i = this.key.get(ev.code);
       let ax = i < 6 ? 0 : i < 12 ? 1 : 2;
       this.cube.turn(ax, i % 6, !ev.shiftKey);
-    } else if (ev.code === 'Space') this.cube.scramble_cube(this.n * this.n + 20);
+    } else if (ev.code === 'Space')this.shuffle();
   };
   private initcanvas(width: number) {
     //make function into variable to pass down
     this.animate = this.animate.bind(this);
     this.animations = [];
-    this.width = width < 500 ? 300 : width < 900 ? 500 : 700;
+    this.width = width < 500 ? 300 : 500;
     this.height = this.width;
     //initalize renderer and scene
     this.renderer.setClearColor('#ffffff');
@@ -129,14 +136,14 @@ export default class Game {
   public reset(n: number) {
     //Initialize First Cube
     this.n = n;
-    // this.stop();
-    this.cube.clean();
+    this.animations=[];
     this.scene.remove(this.cube.getcube());
+    this.cube.clean();
     this.cube = new Cube(this, n);
     this.scene.add(this.cube.getcube());
     this.state = still;
     this.animations.push(this.cube);
     this.control.reset();
-    // this.start();
   }
+
 }
