@@ -10,21 +10,27 @@ The animation is fluid and the relatively lightweight. The size of the cube (num
 Here are some images of the result.
 
 Example of a 1x1 Cube
+
 <img src="https://github.com/shubymao/rubiks-cube-web/blob/master/public/1x1.png?raw=true" width="300" />
 
 Example of a 2x2 Cube
+
 <img src="https://github.com/shubymao/rubiks-cube-web/blob/master/public/2x2.png?raw=true" width="300" />
 
 Example of a 3x3 Cube
+
 <img src="https://github.com/shubymao/rubiks-cube-web/blob/master/public/3x3.png?raw=true" width="300" />
 
 Example of a 4x4 Cube
+
 <img src="https://github.com/shubymao/rubiks-cube-web/blob/master/public/4x4.png?raw=true" width="300" />
 
 Example of a 5x5 Cube
+
 <img src="https://github.com/shubymao/rubiks-cube-web/blob/master/public/5x5.png?raw=true" width="300" />
 
 Example of a shuffled Cube
+
 <img src="https://github.com/shubymao/rubiks-cube-web/blob/master/public/shuffled.png?raw=true" width="300" />
 
 
