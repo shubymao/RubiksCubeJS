@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f3469220f89762c8b34e9ed0421db2a7",
+    "revision": "a30bfe3ca66647ecf13476ccec27bf9a",
     "url": "/rubiks-cube-web/index.html"
   },
   {
