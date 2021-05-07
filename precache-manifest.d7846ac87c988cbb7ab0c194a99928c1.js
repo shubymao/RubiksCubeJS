@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a30bfe3ca66647ecf13476ccec27bf9a",
+    "revision": "99115bd0586b31169f57165b4290cb9e",
     "url": "/rubiks-cube-web/index.html"
   },
   {
-    "revision": "c3f4be69116e6fcefb58",
-    "url": "/rubiks-cube-web/static/css/main.03151aaa.chunk.css"
+    "revision": "e6173afee9e8ec15c996",
+    "url": "/rubiks-cube-web/static/css/main.a1287473.chunk.css"
   },
   {
     "revision": "fa09b147be2340a5bf3b",
     "url": "/rubiks-cube-web/static/js/2.c31964f2.chunk.js"
   },
   {
-    "revision": "c3f4be69116e6fcefb58",
+    "revision": "e6173afee9e8ec15c996",
     "url": "/rubiks-cube-web/static/js/main.bd770790.chunk.js"
   },
   {

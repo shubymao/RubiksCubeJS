@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/rubiks-cube-web/static/css/main.03151aaa.chunk.css",
+    "main.css": "/rubiks-cube-web/static/css/main.a1287473.chunk.css",
     "main.js": "/rubiks-cube-web/static/js/main.bd770790.chunk.js",
     "main.js.map": "/rubiks-cube-web/static/js/main.bd770790.chunk.js.map",
     "runtime-main.js": "/rubiks-cube-web/static/js/runtime-main.ee509a14.js",
@@ -8,8 +8,8 @@
     "static/js/2.c31964f2.chunk.js": "/rubiks-cube-web/static/js/2.c31964f2.chunk.js",
     "static/js/2.c31964f2.chunk.js.map": "/rubiks-cube-web/static/js/2.c31964f2.chunk.js.map",
     "index.html": "/rubiks-cube-web/index.html",
-    "precache-manifest.d6afd28bd0620f86da8bd13077128f3f.js": "/rubiks-cube-web/precache-manifest.d6afd28bd0620f86da8bd13077128f3f.js",
+    "precache-manifest.d7846ac87c988cbb7ab0c194a99928c1.js": "/rubiks-cube-web/precache-manifest.d7846ac87c988cbb7ab0c194a99928c1.js",
     "service-worker.js": "/rubiks-cube-web/service-worker.js",
-    "static/css/main.03151aaa.chunk.css.map": "/rubiks-cube-web/static/css/main.03151aaa.chunk.css.map"
+    "static/css/main.a1287473.chunk.css.map": "/rubiks-cube-web/static/css/main.a1287473.chunk.css.map"
   }
 }
